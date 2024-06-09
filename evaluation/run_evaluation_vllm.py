@@ -83,7 +83,7 @@ def run_eval_pipeline(args: ArgumentParser) -> int:
 
         context_data = []
         for testset in testsets:
-            retrievals = testset.get("rag", {}).get(args.retrieval, {}).get("list", [])
+            retrievals = testset.get("rag", {}).get("list", [])
             context = {
                 "before_cursor": testset["prefix"],
                 "after_cursor": testset["suffix"],
@@ -188,7 +188,8 @@ def run_eval_pipeline(args: ArgumentParser) -> int:
     logger.info(f"Saving results to {args.save_path}")
 
     save_data = df.to_dict(orient="records")
-    json.dump(save_data, open(args.save_path, "w"), indent=4, ensure_ascii=True)
+    if args.save_path:
+        json.dump(save_data, open(args.save_path, "w"), indent=4, ensure_ascii=True)
     return 0
 
 
