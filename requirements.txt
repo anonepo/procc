@@ -2,3 +2,13 @@ vllm==0.4.0
 tree_sitter==0.21.3
 prettytable
 contextualbandits
+nltk
+tabulate
+rouge
+elasticsearch
+pandas
+humanize
+faiss-gpu
+torch
+transformers
+scikit-learn
