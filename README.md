@@ -9,6 +9,7 @@
 For the open-soure benchmark, use the following script:
 ```bash
 # Download the deepseek-coder-6.7b-instruct model to your local path.
+pip install -r requirements.txt
 python ./evaluation/run_evaluation_vllm.py \
     --model_path path/deepseek-coder-6.7b-instruct \
     --model_name deepseek \
