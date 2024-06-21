@@ -40,7 +40,7 @@ Then use of official inference and evaluation scripts, please refer to (cceval)[
 cd path_to_macc
 # for inference
 python benchmark/cceval/scripts/vllm_inference.py \
-	--data_root_dir ./benchmark/cceval_data \
+    --data_root_dir ./benchmark/cceval_data \
     --tp_size 8 \
     --task line_completion_bm25 \
     --language java \
