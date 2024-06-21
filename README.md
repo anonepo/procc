@@ -1,5 +1,5 @@
 ## This is the official repository for MACC: Multi-Agent Code Completion
-
+We propose MACC, the first lightweight multi-agent framework specifically designed for code completion. Our primary objective is to enhance code completion performance while adhering to the real-time constraints of interactive coding environments. MACC is comprised of three specialized expert agents, each focusing on distinct facets essential for code completion. In particular, the _Semantics Agent_ captures the lexical meaning of the incomplete code, the _Completion Agent_ explores potential completions, and the _Summarization Agent_ provides concise summaries of the code context. These agents leverage retrieval tools to access and extract relevant information from a vector database, which effectively functions as their memory. To improve the efficiency while minimizing computational demands, we simplify multi-agent cooperation and iterative reflection by employing contextual multi-armed bandits. This mechanism efficiently determines the most useful pieces of retrieved information at a marginal cost.
 <p align="center">
 <img src="samples/framework.png" alt="results" width="800" height="auto">
 </p>
@@ -44,7 +44,7 @@ python benchmark/cceval/scripts/vllm_inference.py \
     --tp_size 8 \
     --task line_completion_bm25 \
     --language java \
-    --model deepseek-ai/deepseek-coder-1.3b-instruct \
+    --model path/deepseek-coder-1.3b-instruct \
     --output_dir ./tmp \
     --model_max_tokens 16384 \
     --use_crossfile_context \
