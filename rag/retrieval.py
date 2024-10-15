@@ -56,7 +56,7 @@ class Retrieval:
                 prompt_version="v1",
             )
 
-        elif retrieval.startswith("macc"):
+        elif retrieval.startswith("procc"):
             from rag.prompt_retrieval import Retrieval
 
             parts = retrieval.split("-")
