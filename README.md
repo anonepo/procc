@@ -53,7 +53,7 @@ pip install -r requirements.txt
 pip install tree-sitter==0.21.3  # fix tree-sitter version incompatibility issues.
 bash scripts/build_treesitter.sh
 ```
-Then use of official inference and evaluation scripts, please refer to (cceval)[https://github.com/amazon-science/cceval].
+Then use of official inference and evaluation scripts, please refer to [cceval](https://github.com/amazon-science/cceval).
 ```
 cd path_to_procc
 # for inference
