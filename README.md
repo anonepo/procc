@@ -1,22 +1,7 @@
 ## This is the official repository for ProCC: Prompt-based Code Completion via Multi-Retrieval Augmented Generation
 
-Automated code completion, aiming at generating subsequent tokens from unfinished code, has significantly
-benefited from recent progress in pre-trained Large Language Models (LLMs). However, these models often
-suffer from coherence issues and hallucinations when dealing with complex code logic or extrapolating beyond
-their training data. Existing Retrieval Augmented Generation (RAG) techniques partially address these issues
-by retrieving relevant code with a separate encoding model where the retrieved snippet serves as contextual
-reference for code completion. However, their retrieval scope is subject to a singular perspective defined by
-the encoding model, which largely overlooks the complexity and diversity inherent in code semantics. To
-address this limitation, we propose ProCC, a code completion framework leveraging prompt engineering and
-the contextual multi-armed bandits algorithm to flexibly incorporate and adapt to multiple perspectives of
-code. ProCC first employs a prompt-based multi-retriever system which crafts prompt templates to elicit LLM
-knowledge to understand code semantics with multiple retrieval perspectives. Then, it adopts the adaptive
-retrieval selection algorithm to incorporate code similarity into the decision-making process to determine the
-most suitable retrieval perspective for the LLM to complete the code. Experimental results demonstrate that
-ProCC outperforms state-of-the-art code completion technique by 7.92% on public benchmark CCEval, 2.8%
-on our collected open-source benchmark suite, and 5.1% on the private-domain benchmark suite collected
-from a billion-user e-commerce company in terms of Exact Match. ProCC also allows augmenting fine-tuned
-techniques in a plug-and-play manner, yielding an averaged 6.5% improvement over the fine-tuned model.
+Automated code completion, aiming at generating subsequent tokens from unfinished code, has significantly benefited from recent progress in pre-trained Large Language Models (LLMs). However, these models often suffer from coherence issues and hallucinations when dealing with complex code logic or extrapolating beyond their training data. Existing Retrieval Augmented Generation (RAG) techniques partially address these issues by retrieving relevant code with a separate encoding model where the retrieved snippet serves as contextual reference for code completion. However, their retrieval scope is subject to a singular perspective defined by the encoding model, which largely overlooks the complexity and diversity inherent in code semantics. To address this limitation, we propose ProCC, a code completion framework leveraging prompt engineering and the contextual multi-armed bandits algorithm to flexibly incorporate and adapt to multiple perspectives of code. 
+ProCC first employs a prompt-based multi-retriever system which crafts prompt templates to elicit LLM knowledge to understand code semantics with multiple retrieval perspectives. Then, it adopts the adaptive retrieval selection algorithm to incorporate code similarity into the decision-making process to determine the most suitable retrieval perspective for the LLM to complete the code. Experimental results demonstrate that ProCC outperforms a widely-studied code completion technique RepoCoder by 7.92% on the public benchmark CCEval, 3.19% in HumanEval-Infilling, 2.80% on our collected open-source benchmark suite, and 4.48% on the private-domain benchmark suite collected from Kuaishou Technology in terms of Exact Match. ProCC also allows augmenting fine-tuned techniques in a plug-and-play manner, yielding an averaged 6.5% improvement over the fine-tuned model.
 
 <p align="center">
 <img src="samples/framework.png" alt="results" width="800" height="auto">
